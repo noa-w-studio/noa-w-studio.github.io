@@ -8,6 +8,26 @@ body {
   background-attachment: fixed;
 }
 
+body {
+  position: relative;
+}
+body::before, body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #DDCDD6;
+  pointer-events: none;
+  z-index: 1000;
+}
+body::before {
+  left: calc(50% - 220px - 2px);
+}
+body::after {
+  right: calc(50% - 220px - 2px);
+}
+
 .site {
   width: 100%;
   max-width: 440px;
@@ -17,8 +37,7 @@ body {
   font-size: 13px;
   display: grid;
   gap: 40px;
-  border-right: 2px solid #DDCDD6;
-  border-left: 2px solid #DDCDD6;
+  position: relative;
 }
 
 .site {
@@ -166,12 +185,12 @@ a:hover {
 }
 
 .logoSOLINOA {
-  height: 20px;
+  height: 18px;
   width: auto;
 }
 
 .logoLulino {
-  height: 25px;
+  height: 23px;
   width: auto;
 }
 

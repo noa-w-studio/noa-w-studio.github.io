@@ -9,6 +9,29 @@ body{
   background-size: 100% auto;
   background-attachment: fixed;
 }
+body {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: $border-SOLINOA;
+    pointer-events: none;
+    z-index: 1000;
+  }
+
+  &::before {
+    left: calc(50% - #{$max-width / 2} - 2px);
+  }
+
+  &::after {
+    right: calc(50% - #{$max-width / 2} - 2px);
+  }
+}
 .site{
   width: 100%;
   max-width: $max-width;
@@ -18,8 +41,8 @@ body{
   font-size: 13px;
   display: grid;
   gap: 40px;
-  border-right: 2px solid $border-SOLINOA;
-  border-left: 2px solid $border-SOLINOA;
+  position: relative;
+  
 }
 ///* ページロード時 */
  .site{
@@ -213,11 +236,11 @@ a:hover{
 }
 
 .logoSOLINOA{
-  height: 20px;
+  height: 18px;
   width: auto;
 }
 .logoLulino{
-  height: 25px;
+  height: 23px;
   width: auto;
 }
 
