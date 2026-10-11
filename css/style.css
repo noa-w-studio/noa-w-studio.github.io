@@ -16,7 +16,6 @@ body {
   overflow: hidden;
   font-size: 13px;
   display: grid;
-  gap: 40px;
 }
 
 /* ▼ 441px以上だったら */
@@ -107,7 +106,8 @@ a:hover {
   grid-template-columns: 1fr auto 1fr;
   align-items: center;*/
   padding: 20px 10px;
-  background: #fff4e9;
+  margin: 0 0 10px 0;
+  background: #FAEAD9;
   position: relative;
 }
 .header .brand-mini {
@@ -151,7 +151,6 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 56px;
 }
 .label-nav .current {
   /*position: relative;
@@ -169,6 +168,36 @@ a:hover {
     background: url(../img/current_SOLINOA.png) no-repeat;
     background-size: auto 100%;
   }*/
+}
+.label-nav span {
+  padding: 40px 30px;
+}
+.label-nav a {
+  padding: 37px 30px;
+}
+.label-nav .current {
+  background: #fff;
+  border-radius: 10px 10px 0 0;
+  position: relative;
+}
+.label-nav .current::after {
+  position: absolute;
+  bottom: 0;
+  right: -20px;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: #fbf6f1;
+  border-radius: 0 0 0 20px;
+}
+.label-nav .current::before {
+  position: absolute;
+  bottom: 0;
+  right: -20px;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: #fff;
 }
 
 .logoSOLINOA {
@@ -199,6 +228,7 @@ main {
   display: grid;
   gap: 40px;
   padding: 0 20px;
+  background: #fff;
 }
 
 .hero {
@@ -301,6 +331,10 @@ main {
   height: 10px;
 }
 
+.instagram {
+  margin: 0 0 40px;
+}
+
 /* --------------------------------------------------
    main END
 =====================================================*/
@@ -316,7 +350,7 @@ main {
 --------------------------------------------------*/
 .footer {
   padding: 20px 10px;
-  background: #FFF4E9;
+  background: #FAEAD9;
   font-family: "Julius Sans One", sans-serif;
   text-align: center;
 }

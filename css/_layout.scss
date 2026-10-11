@@ -17,7 +17,7 @@ body{
   overflow: hidden;
   font-size: 13px;
   display: grid;
-  gap: 40px;
+  //gap: 40px;
   
 }
 /* ▼ 441px以上だったら */
@@ -145,8 +145,9 @@ a:hover{
   grid-template-columns: 1fr auto 1fr;
   align-items: center;*/
   padding: 20px 10px;
+  margin: 0 0 10px 0;
   //width: 100%;
-  background: #fff4e9;
+  background: #FAEAD9;
   position: relative;
   //border-bottom: 1px solid rgba(190,160,130,.12);
   .brand-mini{
@@ -198,7 +199,7 @@ a:hover{
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 56px;
+  //gap: 56px;
   //background: #fff;
   .current{
     /*position: relative;
@@ -217,6 +218,37 @@ a:hover{
       background-size: auto 100%;
     }*/
     
+  }
+  span{
+    padding: 40px 30px;
+  }
+  
+  a{
+    padding: 37px 30px;
+  }
+  .current{
+    background: #fff;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    &::after{
+      position: absolute;
+      bottom: 0;
+      right: -20px;
+      content: "";
+      width: 20px;
+      height: 20px;
+      background: #fbf6f1;
+      border-radius: 0 0 0 20px;
+    }
+    &::before{
+      position: absolute;
+      bottom: 0;
+      right: -20px;
+      content: "";
+      width: 20px;
+      height: 20px;
+      background: #fff;
+    }
   }
 }
 
@@ -262,6 +294,7 @@ main{
   display: grid;
   gap: 40px;
   padding: 0 20px;
+  background: #fff;
 }
 
 .hero{
@@ -379,6 +412,10 @@ main{
   }
 }
 
+.instagram{
+  margin: 0 0 40px;
+}
+
 /* --------------------------------------------------
    main END
 =====================================================*/
@@ -401,7 +438,7 @@ main{
 --------------------------------------------------*/
 .footer {
   padding: 20px 10px;
-  background: $bg-about;
+  background: #FAEAD9;
   font-family: $font-brand;
   text-align: center;
   strong{
