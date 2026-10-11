@@ -199,56 +199,66 @@ a:hover{
   display: flex;
   align-items: center;
   justify-content: center;
-  //gap: 56px;
-  //background: #fff;
-  .current{
-    /*position: relative;
-    &::after{
-      position: absolute;
-      content: "";
-      top: -30px;
-      width: 100%;
-      height: 36px;
-      left: -56px;
-    }*/
-  }
-  .current.label-SOLINOA{
-    /*&::after{
-      background: url(../img/current_SOLINOA.png) no-repeat;
-      background-size: auto 100%;
-    }*/
-    
-  }
-  span{
+  span.current{
     padding: 40px 30px;
-  }
-  
-  a{
-    padding: 37px 30px;
-  }
-  .current{
     background: #fff;
     border-radius: 10px 10px 0 0;
     position: relative;
     &::after{
-      position: absolute;
-      bottom: 0;
-      right: -20px;
-      content: "";
-      width: 20px;
-      height: 20px;
-      background: #fbf6f1;
-      border-radius: 0 0 0 20px;
+        position: absolute;
+        bottom: 0;
+        left: -20px;
+        content: "";
+        width: 20px;
+        height: 20px;
+        border-radius: 0 0 20px 0;
+      }
+      &::before{
+        position: absolute;
+        bottom: 0;
+        left: -20px;
+        content: "";
+        width: 20px;
+        height: 20px;
+        background: #fff;
+      }
+    span{
+      &::after{
+        position: absolute;
+        bottom: 0;
+        right: -20px;
+        content: "";
+        width: 20px;
+        height: 20px;
+        border-radius: 0 0 0 20px;
+      }
+      &::before{
+        position: absolute;
+        bottom: 0;
+        right: -20px;
+        content: "";
+        width: 20px;
+        height: 20px;
+        background: #fff;
+      }
     }
-    &::before{
-      position: absolute;
-      bottom: 0;
-      right: -20px;
-      content: "";
-      width: 20px;
-      height: 20px;
-      background: #fff;
+  }
+  span.current.label-SOLINOA{
+    &::after{
+        background: #fbf6f1;
+      }
+      &::before{
+      }
+    span{
+      &::after{
+        background: #fbf6f1;
+      }
+      &::before{
+      }
     }
+  }
+  a{
+    padding: 37px 30px;
   }
 }
 
@@ -293,7 +303,7 @@ a:hover{
 main{
   display: grid;
   gap: 40px;
-  padding: 0 20px;
+  padding: 20px 20px 0;
   background: #fff;
 }
 

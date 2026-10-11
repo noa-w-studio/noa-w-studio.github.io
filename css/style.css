@@ -152,45 +152,40 @@ a:hover {
   align-items: center;
   justify-content: center;
 }
-.label-nav .current {
-  /*position: relative;
-  &::after{
-    position: absolute;
-    content: "";
-    top: -30px;
-    width: 100%;
-    height: 36px;
-    left: -56px;
-  }*/
-}
-.label-nav .current.label-SOLINOA {
-  /*&::after{
-    background: url(../img/current_SOLINOA.png) no-repeat;
-    background-size: auto 100%;
-  }*/
-}
-.label-nav span {
+.label-nav span.current {
   padding: 40px 30px;
-}
-.label-nav a {
-  padding: 37px 30px;
-}
-.label-nav .current {
   background: #fff;
   border-radius: 10px 10px 0 0;
   position: relative;
 }
-.label-nav .current::after {
+.label-nav span.current::after {
+  position: absolute;
+  bottom: 0;
+  left: -20px;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 0 0 20px 0;
+}
+.label-nav span.current::before {
+  position: absolute;
+  bottom: 0;
+  left: -20px;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: #fff;
+}
+.label-nav span.current span::after {
   position: absolute;
   bottom: 0;
   right: -20px;
   content: "";
   width: 20px;
   height: 20px;
-  background: #fbf6f1;
   border-radius: 0 0 0 20px;
 }
-.label-nav .current::before {
+.label-nav span.current span::before {
   position: absolute;
   bottom: 0;
   right: -20px;
@@ -198,6 +193,15 @@ a:hover {
   width: 20px;
   height: 20px;
   background: #fff;
+}
+.label-nav span.current.label-SOLINOA::after {
+  background: #fbf6f1;
+}
+.label-nav span.current.label-SOLINOA span::after {
+  background: #fbf6f1;
+}
+.label-nav a {
+  padding: 37px 30px;
 }
 
 .logoSOLINOA {
@@ -227,7 +231,7 @@ a:hover {
 main {
   display: grid;
   gap: 40px;
-  padding: 0 20px;
+  padding: 20px 20px 0;
   background: #fff;
 }
 
