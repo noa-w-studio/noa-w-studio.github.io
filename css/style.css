@@ -247,6 +247,7 @@ main {
   background: #fff;
   margin: 0 auto 30px;
   display: inline-block;
+  border-radius: 3px;
   font-size: 8px;
   text-align: center;
   line-height: 1;
