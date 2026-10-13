@@ -141,6 +141,113 @@ a:hover {
 }
 
 /* ▼ 764px以上だったら */
+/* =========================
+   Header animation
+========================= */
+/* ヘッダー：初期状態 */
+.header.site-header {
+  position: relative;
+  z-index: 1000;
+  margin: 0 0 10px;
+  padding: 20px 10px;
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  pointer-events: auto;
+  transition: padding 0.35s ease, opacity 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* スクロール後、上から下に表示 */
+.header.site-header.is-visible {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  max-width: 440px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 10px;
+  background: #FAEAD9;
+  transform: translate(-50%, 0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  box-shadow: 0 2px 12px rgba(80, 65, 60, 0.06);
+}
+
+/* 隠すとき：上方向へ移動 */
+.header.site-header.is-hidden {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  max-width: 440px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 10px;
+  transform: translate(-50%, -100%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* =========================
+   PageTop button
+========================= */
+.page-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(150, 130, 120, 0.35);
+  border-radius: 50%;
+  background-color: rgba(249, 245, 244, 0.95);
+  color: #82756f;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  /* 初期状態：非表示 */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease, background-color 0.3s ease;
+}
+
+/* スクロール後に表示 */
+.page-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.page-top:hover {
+  background-color: #f0e7e3;
+}
+
+/* スマートフォン */
+@media (max-width: 440px) {
+  .page-top {
+    right: 16px;
+    bottom: 16px;
+    width: 40px;
+    height: 40px;
+  }
+}
+/* 動きを減らす設定をしているユーザーへの配慮 */
+@media (prefers-reduced-motion: reduce) {
+  .site-header,
+  .site-header .logo img,
+  .page-top {
+    transition: none;
+  }
+}
 /* --------------------------------------------------
   header END
 =====================================================*/
