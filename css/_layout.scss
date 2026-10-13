@@ -107,7 +107,7 @@ a:hover{
   border-radius: 50px;
   letter-spacing: .05em;
   font-weight: 500;
-  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.8);
+  //box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.8);
 }
 
 .SOLINOA{
@@ -576,6 +576,27 @@ main{
 
 .instagram{
   margin: 0 0 40px;
+  border-radius: 10px;
+  padding: 40px 20px;
+  background: rgba(210,236,240, 0.4);
+  text-align: center;
+  position: relative;
+  hgroup{
+    text-align: center;
+    margin: 0 0 20px;
+    span{
+      margin: 0 0 20px;
+      display: inline-block;
+      img{
+        margin: 0 auto;
+      }
+    }
+    h2{
+      font-size: 20px;
+      font-family: $font-instagram;
+      font-weight: 200;
+    }
+  }
 }
 
 /* --------------------------------------------------
