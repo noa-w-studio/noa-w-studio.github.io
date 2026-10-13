@@ -158,37 +158,58 @@ a:hover {
 }
 
 /* スクロール後、上から下に表示 */
+.header.site-header {
+  position: relative;
+  z-index: 1000;
+  margin: 0 0 10px;
+  padding: 20px 10px;
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  pointer-events: auto;
+  transition: padding 0.35s ease, opacity 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* スクロールして戻るとき：真上から下へ表示 */
 .header.site-header.is-visible {
   position: fixed;
   top: 0;
-  left: 50%;
+  left: 0;
+  right: 0;
   width: 100%;
-  max-width: 440px;
+  max-width: 436px;
   box-sizing: border-box;
-  margin: 0;
+  margin: 0 auto;
   padding: 10px;
   background: #FAEAD9;
-  transform: translate(-50%, 0);
+  transform: translateY(0);
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
   box-shadow: 0 2px 12px rgba(80, 65, 60, 0.06);
 }
+.header.site-header.is-visible .header-actions {
+  top: 14px;
+}
 
-/* 隠すとき：上方向へ移動 */
+/* 下へスクロールするとき：真上へ隠れる */
 .header.site-header.is-hidden {
   position: fixed;
   top: 0;
-  left: 50%;
+  left: 0;
+  right: 0;
   width: 100%;
-  max-width: 440px;
+  max-width: 436px;
   box-sizing: border-box;
-  margin: 0;
+  margin: 0 auto;
   padding: 10px;
-  transform: translate(-50%, -100%);
+  transform: translateY(-100%);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  /*.header-actions{
+    top:16px
+  }*/
 }
 
 /* =========================
