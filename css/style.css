@@ -93,6 +93,17 @@ a:hover {
   text-shadow: 2px 0 #FDE3C9, -2px 0 #FDE3C9, 0 2px #FDE3C9, 0 -2px #FDE3C9;
 }
 
+.Lulino .shopBtn {
+  background: url(../img/shopBtn_Lulino.png) center no-repeat;
+  background-size: 100% auto;
+  color: #BF68DD;
+  /*text-shadow: 
+  2px 0 #FDE3C9,
+  -2px 0 #FDE3C9,
+  0 2px #FDE3C9,
+  0 -2px #FDE3C9;*/
+}
+
 /* ▼ 764px以上だったら */
 /* --------------------------------------------------
    共通KV END
@@ -216,19 +227,16 @@ a:hover {
 ========================= */
 .page-top {
   position: fixed;
-  right: 24px;
+  right: max(16px, (100vw - 436px) / 2 + 16px);
   bottom: 24px;
   z-index: 999;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
-  border: 1px solid rgba(150, 130, 120, 0.35);
-  border-radius: 50%;
-  background-color: rgba(249, 245, 244, 0.95);
-  color: #82756f;
-  font-size: 24px;
+  width: 80px;
+  padding: 0;
+  border: none;
+  background: transparent;
   line-height: 1;
   cursor: pointer;
   /* 初期状態：非表示 */
@@ -236,7 +244,14 @@ a:hover {
   visibility: hidden;
   pointer-events: none;
   transform: translateY(10px);
-  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease, background-color 0.3s ease;
+  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease;
+}
+
+.page-top img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 /* スクロール後に表示 */
@@ -247,23 +262,8 @@ a:hover {
   transform: translateY(0);
 }
 
-.page-top:hover {
-  background-color: #f0e7e3;
-}
-
-/* スマートフォン */
-@media (max-width: 440px) {
-  .page-top {
-    right: 16px;
-    bottom: 16px;
-    width: 40px;
-    height: 40px;
-  }
-}
 /* 動きを減らす設定をしているユーザーへの配慮 */
 @media (prefers-reduced-motion: reduce) {
-  .site-header,
-  .site-header .logo img,
   .page-top {
     transition: none;
   }
@@ -355,6 +355,10 @@ a:hover {
 /* =====================================================
    main
 --------------------------------------------------*/
+.news {
+  padding: 20px;
+}
+
 main {
   display: grid;
   gap: 40px;
@@ -400,8 +404,24 @@ main {
   color: #C3AB92;
   padding: 30px 20px;
 }
-.hero.SOLINOA .panel .logo-card img {
+.hero.SOLINOA .panel .logo-card img.logoLulino {
   height: 20px;
+}
+
+.hero.Lulino .panel {
+  background: #FAEDF4;
+}
+.hero.Lulino .panel .logo-card {
+  border: 1px solid #DDCDD6;
+  color: #C3AB92;
+  padding: 10px 20px;
+}
+.hero.Lulino .panel .logo-card img.lulinoSymbol {
+  height: 33px;
+  margin: 0 auto;
+}
+.hero.Lulino .panel .logo-card img.logoLulino {
+  height: 25px;
 }
 
 .text-Group {
@@ -481,6 +501,8 @@ main {
 }
 .instagram hgroup span img {
   margin: 0 auto;
+  height: 35px;
+  width: auto;
 }
 .instagram hgroup h2 {
   font-size: 20px;
