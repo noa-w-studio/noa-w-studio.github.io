@@ -487,9 +487,9 @@ main {
   margin: 0 0 40px;
   border-radius: 10px;
   padding: 40px 20px;
-  background: rgba(210, 236, 240, 0.4);
   text-align: center;
   position: relative;
+  min-height: 335px;
 }
 .instagram hgroup {
   text-align: center;
@@ -508,6 +508,16 @@ main {
   font-size: 20px;
   font-family: "Jost", sans-serif;
   font-weight: 200;
+}
+
+.instagram.SOLINOA {
+  background: url(../img/instagram_bg_SOLINOA.png) no-repeat;
+  background-size: 100% auto;
+}
+
+.instagram.Lulino {
+  background: url(../img/instagram_bg_Lulino.png) no-repeat;
+  background-size: 100% auto;
 }
 
 /* --------------------------------------------------
